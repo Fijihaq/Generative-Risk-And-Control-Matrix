@@ -1,0 +1,50 @@
+!DOCTYPE html
+html lang=en
+head
+  meta charset=UTF-8
+  titleRisk & Control Matrix Generatortitle
+  style
+    body { font-family Arial, sans-serif; margin 40px; }
+    h1 { color #2c3e50; }
+    label { display block; margin-top 15px; }
+    select, input, textarea { width 300px; padding 8px; margin-top 5px; }
+    button { margin-top 20px; padding 10px 20px; background #3498db; color white; border none; cursor pointer; }
+    buttonhover { background #2980b9; }
+  style
+head
+body
+  h1Risk & Control Matrix Generatorh1
+  form
+    !-- Control Testing Type --
+    label for=controlTypeType of Control Testinglabel
+    select id=controlType name=controlType required
+      option value=--Select--option
+      option value=techTechoption
+      option value=operationsOperationsoption
+    select
+
+    !-- Reference Framework --
+    label for=frameworkReference Frameworklabel
+    select id=framework name=framework required
+      option value=--Select--option
+      option value=internalInternal Risk & Control Libraryoption
+      option value=cobitCOBIToption
+      option value=nistNISToption
+    select
+
+    !-- Priority Preference --
+    label for=priorityPriority Preference (specific controlcoverage)label
+    input type=text id=priority name=priority placeholder=Enter preference required
+
+    !-- Optional Number of Tests --
+    label for=numTestsNumber of Risk & Control Tests (optional)label
+    input type=number id=numTests name=numTests min=1
+
+    !-- Optional Upload Standards --
+    label for=uploadUpload Internal StandardsProcedures (optional)label
+    input type=file id=upload name=upload
+
+    button type=submitGenerate Matrixbutton
+  form
+body
+html

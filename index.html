@@ -218,6 +218,17 @@
             a.download = "rcm.csv";
             a.click();
         }
+        fetch("https://abc123.execute-api.us-east-1.amazonaws.com/prod/generateMatrix", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(formData)
+})
+.then(res => res.json())
+.then(data => {
+  // Display matrix on page
+  console.log(data);
+});
     </script>
 </body>
 </html>
+
